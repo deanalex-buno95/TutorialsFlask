@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 PORT_NUMBER = 8500
 
-
 @app.route('/')
 def hello_world():
     return '<h1>Hello World! :)</h1>'
@@ -14,6 +13,12 @@ def hello_world():
 @app.route('/greet/<name>')
 def greet(name=""):
     return f"Hello {name}"
+
+
+@app.route('/f')
+@app.route('/f/<temperature_in_celcius>')
+def f(temperature_in_celcius=0):
+    pass
 
 
 if __name__ == '__main__':

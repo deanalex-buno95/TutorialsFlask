@@ -1,8 +1,16 @@
+"""
+Practical 10:
+Question 3
+app.py
+"""
+
+
 from flask import Flask
 
 app = Flask(__name__)
 
 PORT_NUMBER = 8500
+
 
 @app.route('/')
 def hello_world():
